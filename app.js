@@ -77,7 +77,7 @@ app.delete('/campgrounds/:id',catchAsync(async(req,res)=>{
 
 app.use((err,req,res,next)=>{
     const {statusCode =500, message='Something is wrong. I can feel it'}= err
-    res.status(statusCode).send(message)
+    res.status(statusCode).send(message);
 })
 
 app.listen(3000, function(){
